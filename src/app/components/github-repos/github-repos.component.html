@@ -1,1 +1,14 @@
-<p>github-repos works!</p>
+<div class="card">
+    <div class="card-header bg-light text-white">
+      <h4>Github Repositories</h4>
+    </div>
+    <div class="card-body">
+      <ul class="list-group">
+          <li *ngFor="let repo of githubRepos" class="list-group-item display-flex justify-content-between">
+              <a [href]="repo.html_url" class="text-primary" target="_blank"{{repo.name}}>Name</a>
+              <span class="badge badge-success"{{repo.stargazers_count}}>Stars</span>
+              <span class="badge badge-warning"{{repo.watcher.count}}>Stars</span>
+        </li>
+      </ul>
+    </div> 
+</div>
